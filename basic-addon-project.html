@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎮 Minecraft 🎮</title>
+    <style>
+      body {
+        font-family: Source Code Pro;
+        background: linear-gradient(
+          180deg,
+          rgb(115, 211, 96) 0%,
+          rgb(167, 92, 34) 100%
+        );
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
+
+      h1 {
+        color: #126612;
+        font-size: 38px;
+      }
+      h2 {
+        color: #a5382a;
+        font-size: 26px;
+      }
+
+      p {
+        text-align: justify;
+        padding: 10px;
+        line-height: 1.5;
+      }
+
+      button {
+        font-family: Source Code Pro;
+        display: block;
+        margin: 20px auto;
+        padding: 10px 15px;
+        background: #a5382a;
+        color: bisque;
+        border: 1px solid #b3dab3;
+        transition: all 150ms ease-in-out;
+        border-radius: 10px;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: #126612;
+      }
+
+      a {
+        text-decoration: none;
+        color: bisque;
+      }
+      footer {
+        text-align: center;
+        font-size: 15px;
+      }
+
+      .container {
+        background: #b3dab3;
+        margin: 40px auto;
+        max-width: 600px;
+        border: 1px solid #a5382a;
+        border-radius: 10px;
+        padding: 0 20px;
+      }
+      .contact:hover {
+        color: rgb(115, 211, 96);
+      }
+      .themeColor {
+        background: #6b1f15;
+        border: 1px solid #6b1f15;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      .center-picture {
+        transition: all 200ms ease-in-out;
+        width: 100%;
+        border-radius: 15px;
+      }
+      .center-picture:hover {
+        filter: blur(5px);
+      }
+
+      .grid {
+        display: grid;
+        margin: 10px 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+      }
+
+      .grid-image {
+        transition: all 200ms ease-in-out;
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .grid-image:hover {
+        transform: scale(1.2);
+      }
+
+      .dark {
+        background: linear-gradient(
+          360deg,
+          rgb(59, 124, 30) 0%,
+          rgb(85, 45, 26) 100%
+        );
+      }
+
+      .dark .container {
+        background-color: rgba(90, 115, 90, 0.531);
+      }
+
+      .dark h1 {
+        color: #0e4f0e;
+      }
+
+      .dark h2 {
+        color: #531911;
+      }
+
+      .dark .themeColor {
+        background-color: #126612;
+      }
+
+      .dark .themeColor:hover {
+        background: #6b1f15;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="themeColor">Dark or Light</button>
+    <div class="container">
+      <h1>Welcome to Minecraft</h1>
+      <h2>Build your own Realm 🏰</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/230/original/image_6483441.JPG?1695667981"
+        alt="minecraft-world"
+        class="center-picture"
+      />
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/234/original/image_6487327.JPG?1695668488"
+          alt="top-view"
+          class="grid-image"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/231/original/IMG_3871.jpeg?1695668055"
+          alt="minecraft-tower"
+          class="grid-image"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/232/original/IMG_3866.jpeg?1695668314"
+          alt="inside-building"
+          class="grid-image"
+        />
+      </div>
+      <p>
+        In Minecraft the world is at your feet. There are many ways to play this
+        blocky sandbox. Whether you want to survive the night or build a work of
+        art—how you experience it is all up to you! But learning the ropes of a
+        new game can be overwhelming. To help you on your journey, we offer a
+        library of resources that cover the fundamentals of Minecraft: from how
+        you craft or use a controller, to how you play with friends.
+      </p>
+      <button>
+        <a href="https://www.minecraft.net/en-us" target="_blank"
+          >Start Mining
+        </a>
+      </button>
+    </div>
+    <footer>
+      Coded by
+      <a
+        href="https://www.linkedin.com/in/holly-fort/"
+        target="_blank"
+        class="contact"
+        >Holly Fort</a
+      >
+    </footer>
+
+    <script>
+      function changeColor() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let button = document.querySelector(".themeColor");
+      button.addEventListener("click", changeColor);
+    </script>
+  </body>
+</html>
